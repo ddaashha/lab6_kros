@@ -18,7 +18,7 @@ export class FoodDeliveryComponent implements OnInit {
   isLoading: boolean = true;
   errorMessage: string | null = null;
 
-  constructor(private productService: ProductService) {} 
+  constructor(private productService: ProductService) {}
 
   async ngOnInit(): Promise<void> {
     await this.loadProducts();

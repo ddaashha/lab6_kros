@@ -18,7 +18,7 @@ export class FoodDeliveryComponent implements OnInit {
   isLoading: boolean = true;
   errorMessage: string | null = null;
 
-  constructor(private productService: ProductService) {} // Fixed capitalization
+  constructor(private productService: ProductService) {} 
 
   async ngOnInit(): Promise<void> {
     await this.loadProducts();
@@ -29,8 +29,8 @@ export class FoodDeliveryComponent implements OnInit {
     this.errorMessage = null;
 
     try {
-      await this.productService.load(); // Updated to lowercase
-      this.products = this.productService.getProducts(); // Updated to lowercase
+      await this.productService.load(); 
+      this.products = this.productService.getProducts(); 
     } catch (error) {
       this.errorMessage = 'Не вдалося завантажити меню. Спробуйте пізніше.';
       this.products = [];
